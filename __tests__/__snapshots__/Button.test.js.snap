@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchButton should render properly 1`] = `
+<div
+  className="sc-gsDKAQ fBKVVW"
+>
+  <form
+    id="form"
+  >
+    <input
+      id="search"
+      name="search"
+      onChange={[Function]}
+      placeholder="Stock Ticker"
+      style={
+        Object {
+          "border": "black ridge 1px",
+          "padding": "0.6rem",
+        }
+      }
+      type="text"
+      vlaue=""
+    />
+  </form>
+  <div
+    className="sc-bdvvtL exMHmO"
+    id="searchbutton"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#3773f5",
+        "color": "black",
+      }
+    }
+  >
+    Search
+  </div>
+  <h1>
+    
+  </h1>
+</div>
+`;

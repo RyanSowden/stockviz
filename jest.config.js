@@ -9,12 +9,4 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
 }
 
-module.exports = {
-  collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-  ],
-}
-
 module.exports = createJestConfig(customJestConfig)

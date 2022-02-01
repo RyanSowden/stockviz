@@ -23,14 +23,14 @@ const SearchButton = () =>{
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+     
         getStock();
         clearState();
     }
 
     return(
         <Container>
-            <form>
+            <form id="form">
                 <input
                 type="text"
                 vlaue={ticker}
@@ -41,7 +41,7 @@ const SearchButton = () =>{
                 name="search" 
                 />
             </form>
-            <Button onClick={handleSubmit} style={{backgroundColor: '#3773f5', color: 'black'}}>
+            <Button id='searchbutton' onClick={handleSubmit} style={{backgroundColor: '#3773f5', color: 'black'}}>
                     Search
             </Button>
            <SearchFunction value={ticker}/>
