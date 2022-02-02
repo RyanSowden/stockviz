@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useState } from 'react';
 import Graph from './Graph';
-import SearchButton from './Button';
-import { loadGetInitialProps } from 'next/dist/shared/lib/utils';
-
+import SearchFunction from './SearchFunction';
 
 
 
@@ -21,8 +19,8 @@ const Header = (props) => {
 		getStock();
 	}
 
-	const callb = () => {
-		props.callBack(ticker)
+	const getTicker = () => {
+		return(props.callBack(ticker))
 	}
 
 	return(
@@ -30,7 +28,7 @@ const Header = (props) => {
 			
 			<Title>StockViz</Title>
 			<ButtonContainer>
-			<form>
+			<form id='form'>
                 <input
                 type="text"
                 vlaue={ticker}
@@ -41,7 +39,7 @@ const Header = (props) => {
                 name="search" 
                 />
             </form>
-            <Button onClick={callb} style={{backgroundColor: '#3773f5', color: 'black'}}>
+            <Button id='searchbutton' onClick={getTicker} style={{backgroundColor: '#3773f5', color: 'black'}}>
                     Search
             </Button>
 			</ButtonContainer>
