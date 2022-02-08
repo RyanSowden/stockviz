@@ -7,11 +7,9 @@ import Chart from 'chart.js/auto';
 
 
 const Graph = (props) =>{
-    const stockDates = props.history_date
-    const stockData = props.history_data
-
+    const stockData = props.history_date
     const state = {
-        labels: stockDates,
+        labels: stockData[0],
         datasets: [
           {
                     label: 'Price',
@@ -20,7 +18,7 @@ const Graph = (props) =>{
                     backgroundColor: 'LightGray',
                     borderColor: 'rgba(0,0,0,1)',
                     borderWidth: 1,
-                    data: stockData
+                    data: stockData[1]
                   }
               ]
   }
@@ -44,7 +42,7 @@ const Graph = (props) =>{
 				}}
 
 				data={state}
-		/>
+	    />
           
         </div>      
 

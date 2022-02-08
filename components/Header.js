@@ -8,11 +8,11 @@ import SearchFunction from './SearchFunction';
 
 const Header = (props) => {
 	
-	const [ticker,setTicker] = useState('')
+	const [stockTicker,setStockTicker] = useState('')
 	const [currentStock,setCurrentStock] = useState('')
 
 	const handleChange = (e) => { 
-		setTicker(e.target.value); 
+		setStockTicker(e.target.value); 
 	}
 
 	const handleSubmit = (e) => {
@@ -20,7 +20,7 @@ const Header = (props) => {
 	}
 
 	const getTicker = () => {
-		return(props.callBack(ticker))
+		return(props.callBack(stockTicker))
 	}
 
 	return(
@@ -31,7 +31,7 @@ const Header = (props) => {
 			<form id='form'>
                 <input
                 type="text"
-                vlaue={ticker}
+                vlaue={stockTicker}
                 onChange={handleChange}
                 style={form}
                 id="search"
