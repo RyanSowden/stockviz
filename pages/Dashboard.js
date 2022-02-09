@@ -24,34 +24,35 @@ const Dashboard = () => {
 
     }
 
-    const getCurrentStock = async () => {
-        try{
-		const data = {
-			method: 'POST',
-			headers: {'Content-type': 'application/json'},
-			body:  JSON.stringify({ticker: ticker})
-		}
-		const current_response = await fetch('http://localhost:2000/current',data);
-		const current_result = await current_response.json()
-		const current_price = (current_result['regularMarketPrice'])
-		//const company_name = (current_result['data'].longName)
-		setCurrentStock(current_price)
-		//setCompanyName(company_name)
-		console.log(currentStock)
-        } catch(err){
-            console.log(err)
-        }
-    }
-     const getAdjustedPrice = async ()  =>  {
-         try {
-            const adjusted_response = await axios.post('http://localhost:2000/current',{ticker});
-		    const adjusted_result = await adjusted_response
-		    const adjusted_price = (adjusted_result['data'].postMarketPrice)
-		    setAdjustedStock(adjusted_price)
-	    } catch(err) {
+    useEffect(() => {
+	    try{
+		    const getCurrentStock = async () => {
+			    const current_response = await axios.post('http://localhost:2000/current',{ticker});
+			    const current_result = await current_response
+			    const current_price = (current_result['data'].regularMarketPrice)
+			    const company_name = (current_result['data'].longName)
+			    setCurrentStock(current_price)
+			    setCompanyName(company_name)
+			}
+		} catch(err){
+		    console.log(err)
+		};
+	    getCurrentStock();
+	    },[ticker])
+
+     useEffect(() => {
+	     try {
+		     const getAdjustedPrice = async ()  =>  {
+			     const adjusted_response = await axios.post('http://localhost:2000/current',{ticker});
+			     const adjusted_result = await adjusted_response
+			     const adjusted_price = (adjusted_result['data'].postMarketPrice)
+			     setAdjustedStock(adjusted_price)
+		     }	
+	     }catch(err) {
 		    console.log(err)
 	    };
-     }
+	     getAdjustedPrice();
+     },[ticker])
 
      useEffect(() =>  {
 		try {
@@ -80,7 +81,7 @@ const Dashboard = () => {
 			}
 		} catch(err) {
 			console.log(err.history_result.data)
-		};
+		;}
 	     getHistory()
      },[ticker])
 
@@ -92,6 +93,7 @@ const Dashboard = () => {
         <Wrapper>
                 <MainContainer>
                     <Header callBack={getTicker}/>
+                    <SearchFunction company_name={companyName}/>
                     <SearchFunction current_stock={currentStock}/>
                     <SearchFunction adjusted_stock={adjustedStock}/>
 	    	    <Graph history_date={Data}/> 
@@ -107,7 +109,7 @@ const Wrapper = styled.div`
     display: flex;
     height: 100vh;
     width: 100vw;
-    background-color: #f8f8ff;
+    background-color: white;
     color: black; 
 
 `
