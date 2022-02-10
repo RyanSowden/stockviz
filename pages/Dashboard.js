@@ -31,7 +31,7 @@ const Dashboard = () => {
 			    const current_result = await current_response
 			    const current_price = (current_result['data'].regularMarketPrice)
 			    const company_name = (current_result['data'].longName)
-			    setCurrentStock(current_price)
+			    setCurrentStock("Current Price:" + ' ' +  current_price)
 			    setCompanyName(company_name)
 			}
 		} catch(err){
@@ -46,7 +46,7 @@ const Dashboard = () => {
 			     const adjusted_response = await axios.post('http://localhost:2000/current',{ticker});
 			     const adjusted_result = await adjusted_response
 			     const adjusted_price = (adjusted_result['data'].postMarketPrice)
-			     setAdjustedStock(adjusted_price)
+			     setAdjustedStock("Pre-Market:" + ' ' + adjusted_price)
 		     }	
 	     }catch(err) {
 		    console.log(err)
@@ -114,6 +114,6 @@ const Wrapper = styled.div`
 
 `
 
-const MainContainer = styled.div `
+const MainContainer = styled.div`
     flex: 1;
 `

@@ -6,11 +6,13 @@ const SearchFunction = (props) => {
     const adjusted_price = props.adjusted_stock
     const company_name = props.company_name
     return(
-	<Wrapper>
-        <h2>{current_price}</h2>
-        <h2>{adjusted_price}</h2>
-	<Header1>{company_name}</Header1>
-	</Wrapper>
+	<div>
+	    <Header1>{company_name}</Header1>
+	    <StockPrices>
+        	<CurrentStock>{current_price}</CurrentStock>
+        	<AdjustedStock>{adjusted_price}</AdjustedStock>
+	    </StockPrices>
+	</div>
     )
 }
 
@@ -23,7 +25,23 @@ const Wrapper = styled.div`
 `
 
 const Header1 = styled.h1`
+   margin-left: 5px;
+   font-family: Helvetica;
+`
+
+const StockPrices = styled.div`
    display: flex;
-   text-align: center;
-   justify-content: center;
+   margin-left: 5px;
+   flex-direction: row;
+   justify-content: left;
+`
+
+const CurrentStock = styled.h3`
+   martin-top: auto;
+   flex: 1;
+
+`
+const AdjustedStock = styled.h3`
+   margin-top: auto;
+   flex: 2;
 `
