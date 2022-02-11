@@ -88,14 +88,13 @@ const Dashboard = () => {
 
 
      const Data = [historyDate,historyStock]
+     const StockData = [companyName,currentStock,adjustedStock]
 
     return(
         <Wrapper>
                 <MainContainer>
                     <Header callBack={getTicker}/>
-                    <SearchFunction company_name={companyName}/>
-                    <SearchFunction current_stock={currentStock}/>
-                    <SearchFunction adjusted_stock={adjustedStock}/>
+                    <SearchFunction stock_data={StockData}/>
 	    	    <Graph history_date={Data}/> 
                    
                 </MainContainer>

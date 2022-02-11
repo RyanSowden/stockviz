@@ -15,7 +15,7 @@ const Graph = (props) =>{
                     label: 'Price',
                     fill: true,
                     lineTension: 0.5,
-                    backgroundColor: 'LightGray',
+                    backgroundColor:'rgba(236,236,236,0.5)' ,
                     borderColor: 'rgba(0,0,0,1)',
                     borderWidth: 1,
                     data: stockData[1]

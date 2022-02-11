@@ -29,19 +29,19 @@ const Header = (props) => {
 			<Title>StockViz</Title>
 			<ButtonContainer>
 			<form id='form'>
-                <input
-                type="text"
-                vlaue={stockTicker}
-                onChange={handleChange}
-                style={form}
-                id="search"
-                placeholder="Stock Ticker"
-                name="search" 
-                />
-            </form>
-            <Button id='searchbutton' onClick={getTicker} style={{backgroundColor: '#3773f5', color: 'black'}}>
-                    Search
-            </Button>
+			<input
+			type="text"
+			vlaue={stockTicker}
+			onChange={handleChange}
+			style={form}
+			id="search"
+			placeholder="Stock Ticker"
+			name="search" 
+			/>
+		    </form>
+			    <Button id='searchbutton' onClick={getTicker} style={{backgroundColor: '#3773f5', color: 'black'}}>
+				    Search
+			    </Button>
 			</ButtonContainer>
 
 		</Wrapper>
