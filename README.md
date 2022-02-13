@@ -1,6 +1,6 @@
-[![Latest npm version](https://img.shields.io/npm/v/yahoo-finance?logo=npm)](https://www.npmjs.com/package/yahoo-finance)
 [![GitHub](https://img.shields.io/badge/issue_tracking-github-blue?logo=github)](https://github.com/RyanSowden/stockviz/issues)
 
+[![Latest npm version](https://img.shields.io/npm/v/yahoo-finance?logo=npm)](https://www.npmjs.com/package/yahoo-finance)
 # StockViz
 
 ## About
