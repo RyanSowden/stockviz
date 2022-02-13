@@ -21,7 +21,7 @@ This is a front end app only and needs to connect to an API to be able to run th
 
 # Contributing
 
-Contributions are always welcome, simply make the canges you want/think this needs and create a pull request for me to review.
+Contributions are always welcome, simply make the changes you want/think this needs and create a pull request for me to review.
 As this project is still in beta there will be changes made, please make sure you have the latest version before creating a pull request.
 
 Thanks 
