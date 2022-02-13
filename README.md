@@ -8,5 +8,18 @@ StockViz is an app that lets you look up stock prices based on their ticker symb
 
 ## Install & Setup
 
-To install clonoe the repository into your required folder. To run the app in production mode run the command next build
+This is a front end app only and needs to connect to an API to be able to run the stock queries and display data, you can follow the setup and deployment of the nodejs server backend I created for this project.
+
+
+* To install clone the repository into your required folder. 
+* To run the app in development mode, run the command ```npm run dev```
+* To build the app for production run the command ```npm run build```
+* To run the app in production mode run ```npm start```
+
+# Contributing
+
+Contributions are always welcome, simply make the canges you want/think this needs and create a pull request for me to review.
+As this project is still in beta there will be changes made, please make sure you have the latest version before creating a pull request.
+
+Thanks 
 
